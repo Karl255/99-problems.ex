@@ -1,8 +1,8 @@
 # Eliminate consecutive duplicates of list elements.
 
-# this version is tail recursive meaning it executes a lot faster than the other version
+# this version is tail recursive meaning it executes a lot faster than the other version and doesn't have the chance of overflowing the stack
 
-defmodule Problem8_fast do
+defmodule Problem8Fast do
   def eliminate(list) do
     eliminate(list, [])
     |> Enum.reverse()
@@ -29,8 +29,8 @@ defmodule Problem8_fast do
   end
 end
 
-Problem8_fast.test([])
-Problem8_fast.test([1, 2, 3])
-Problem8_fast.test([1, 2, 2, 3])
-Problem8_fast.test([1, 2, 2, 1, 1, 2, "3"])
-Problem8_fast.test([1, 1, 2, 2, "2", 1, 1, 2, "3", 3, 3, 3])
+Problem8Fast.test([])
+Problem8Fast.test([1, 2, 3])
+Problem8Fast.test([1, 2, 2, 3])
+Problem8Fast.test([1, 2, 2, 1, 1, 2, "3"])
+Problem8Fast.test([1, 1, 2, 2, "2", 1, 1, 2, "3", 3, 3, 3])

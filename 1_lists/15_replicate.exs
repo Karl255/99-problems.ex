@@ -23,7 +23,7 @@ defmodule Problem15 do
   end
   
   def test(list, n) do
-    IO.puts("#{list |> inspect} -> #{replicate(list, n) |> inspect}")
+    IO.puts("#{n} * #{list |> inspect} -> #{replicate(list, n) |> inspect}")
   end
 end
 
